@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const imageElement = document.querySelector('.slider .image');
     const images = [
         'assets/1.jpg',
         'assets/2.jpg',
@@ -6,22 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let currentIndex = 0;
-    const imageElement = document.querySelector('.slider .image');
-
     function showImage(index) {
         if (index >= images.length) {
             index = 0;
         }
-
-        imageElement.src = images[index];
+        currentIndex = index;
+        imageElement.setAttribute('src', images[index]);
     }
 
-    function nextImage() {
+    setInterval(() => {
         currentIndex++;
         showImage(currentIndex);
-    }
-
-    showImage(currentIndex);
-
-    setInterval(nextImage, 3000);
+    }, 3000);
 });
