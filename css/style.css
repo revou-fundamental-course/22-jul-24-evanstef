@@ -3,6 +3,7 @@ body {
     font-family: "Poppins", sans-serif;
     /* font-weight: 400;
     font-style: normal; */
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -124,3 +125,192 @@ body {
     color: white;
 }
 /* akhir form */
+
+/* hamburger menu */
+
+.hamburge-menu {
+    display: none;
+}
+
+.sub-menu-mobile {
+    display: none;
+}
+
+/* Tablet Version */
+
+@media screen and (max-width: 768px) { 
+    .label h1 {
+        font-size: 24px;
+    }
+
+    .label p {
+        font-size: 14px;
+    }
+
+    .menu {
+        margin-top: 20px;
+    }
+
+    .image {
+        width: 100%;
+        height: 450px;
+        border-radius: 5px;
+    }
+
+    .slider p {
+        font-size: 14px;
+    }
+
+    .image-profil {
+        width: 45px;
+        height: 45px;
+    }
+
+    .sub-profil h4 {
+        font-size: 14px;
+    }
+
+    .sub-profil p {
+        font-size: 12px;
+    }
+
+    .bagian-2 {
+        padding : 5px 15px
+    }
+
+    .container-form h1 {
+        font-size: 20px;
+    }
+
+    .container-form p {
+        font-size: 14px;
+    }
+
+    /* ini form */
+    .input-name {
+        padding: 5px 5px;
+        font-size: 12px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    
+    .input-email {
+        padding: 5px 5px;
+        font-size: 12px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    
+    .input-location {
+        padding: 5px 5px;
+        font-size: 12px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    
+    .input-submit {
+        padding: 5px 5px;
+        font-size: 12px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: rgb(17, 17, 17);
+        cursor: pointer;
+        color: white;
+    }
+    /* akhir form */
+
+}
+
+
+/* Mobile Version */
+
+@media screen and (max-width: 576px) { 
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .sub-menu {
+        display: none;
+    }
+
+    .hamburge-menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 5px;
+        z-index: 100;
+    }
+
+    .hamburge-menu span {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        border-radius: 3px;
+        transition: ease-in-out 0.3s;
+    }
+
+    .active-menu span:nth-child(1) { 
+        transform-origin: 0% 0%;
+        transform: rotate(45deg);
+    }
+
+    .active-menu span:nth-child(2) { 
+        opacity: 0;
+    }
+
+    .active-menu span:nth-child(3) { 
+        transform-origin: 0% 100%;
+        transform:translateX(-0.5px) rotate(-45deg);
+    }
+
+    /* menu-mobile */
+
+        .sub-menu-mobile {
+            transition: ease-in-out 0.3s;
+            display: flex;
+            flex-direction: column;
+            padding: 100px 30px 0 30px;
+            background-color: grey;
+            align-items: center;
+            gap: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            z-index: 1;
+            transform: translateX(100%);
+        }
+
+        .sub-menu-mobile a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .active-menu-mobile {
+            transform: translateX(0px);
+        }
+
+        /* menu-mobile */
+        .menu {
+            flex-direction: column;
+        }
+
+        .image {
+            width: 100%;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        .bagian-1 {
+            width: 100%;
+        }
+
+        .bagian-2 {
+            width: 100%;
+        }
+
+}

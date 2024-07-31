@@ -20,3 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         showImage(currentIndex);
     }, 3000);
 });
+
+
+const menuHamburger = document.querySelector('.hamburge-menu');
+
+menuHamburger.addEventListener('click', () => {
+    const subMenu = document.querySelector('.sub-menu-mobile');
+    subMenu.classList.toggle('active-menu-mobile');
+    menuHamburger.classList.toggle('active-menu');
+});
+
+// pada saat halaman di scroll maka menu mobile akan hilang
+window.onscroll = () => {
+    const subMenu = document.querySelector('.sub-menu-mobile');
+    subMenu.classList.remove('active-menu-mobile');
+    menuHamburger.classList.remove('active-menu');
+}
